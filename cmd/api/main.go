@@ -26,6 +26,7 @@ func main() {
 
 	// Memuat variabel environment dari file .env
 	config.LoadEnv()
+	config.InitCloudinary()
 
 	// Inisialisasi koneksi database
 	db := config.InitDB()
@@ -38,7 +39,7 @@ func main() {
 	// ==========================
 	// STATIC FILES (GLOBAL)
 	// ==========================
-	r.Static("/static", "./public/uploads")
+	imageStorage := storage.NewCloudinaryStorage()
 
 	config := cors.Config{
 		// Hanya izinkan domain frontend resmi kamu
@@ -59,7 +60,7 @@ func main() {
 
 	r.Use(cors.New(config))
 
-	imageStorage := storage.NewLocalStorage("./public/uploads", "/static")
+	// imageStorage := storage.NewLocalStorage("./public/uploads", "/static")
 
 	// ==========================
 	// REPOSITORY INITIALIZATION
