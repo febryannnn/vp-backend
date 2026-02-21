@@ -45,6 +45,7 @@ func main() {
 		AllowOrigins: []string{
 			"http://localhost:3000",         // Local development
 			"https://victoria-properti.com", // Production
+			"https://victoria-property.vercel.app"
 		},
 		// Batasi method yang boleh digunakan
 		AllowMethods: []string{"GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"},
@@ -125,7 +126,7 @@ func main() {
 	// ==========================
 
 	// Mengambil port dari environment variable
-	port := os.Getenv("APP_PORT")
+	port := os.Getenv("PORT")
 	if port == "" {
 		port = "8080"
 	}

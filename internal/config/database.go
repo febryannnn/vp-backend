@@ -26,8 +26,8 @@ func InitDB() *sql.DB {
 	dbConfig := fmt.Sprintf(
 		"%s:%s@tcp(%s:%s)/%s?parseTime=true",
 		GetEnv("DB_USERNAME", "root"),
-		GetEnv("DB_PASSWORD", ""),
-		GetEnv("DB_HOST", "localhost"),
+		GetEnv("DB_PASSWORD", "jXIvMkFnhHLecDRAowodAVtApzaKfqgx"),
+		GetEnv("DB_HOST", "mysql.railway.internal"),
 		GetEnv("DB_PORT", "3306"),
 		GetEnv("DB_NAME", "victoria_property"),
 	)
