@@ -45,7 +45,7 @@ func main() {
 		AllowOrigins: []string{
 			"http://localhost:3000",         // Local development
 			"https://victoria-properti.com", // Production
-			"https://victoria-property.vercel.app",
+			"https://victoria-property-frontend-igi8.vercel.app",
 		},
 		// Batasi method yang boleh digunakan
 		AllowMethods: []string{"GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"},
